@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🤖 AI Resume Analyzer</div>
+        <p>Analyze your resume and improve your career profile</p>
+    </header>
+
+    <main>
+
+        <!-- Upload Section -->
+        <section class="upload-section">
+
+            <h2>📄 Upload Your Resume</h2>
+
+            <p class="description">
+                Upload your resume or paste your resume text below.
+            </p>
+
+            <input type="file" id="resumeFile" accept=".pdf,.doc,.docx,.txt">
+
+            <textarea
+                id="resumeText"
+                placeholder="Or paste your resume text here..."
+            ></textarea>
+
+            <button onclick="analyzeResume()">
+                🔍 Analyze Resume
+            </button>
+
+        </section>
+
+
+        <!-- Result Section -->
+        <section id="resultSection" class="result-section">
+
+            <h2>📊 Resume Analysis</h2>
+
+            <div class="score-card">
+
+                <div class="score-circle">
+                    <span id="score">0</span>
+                    <small>/100</small>
+                </div>
+
+                <div>
+                    <h3>Resume Score</h3>
+                    <p id="scoreMessage">
+                        Upload your resume to get your score.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Skills -->
+            <div class="card">
+
+                <h3>💡 Detected Skills</h3>
+
+                <div id="skills" class="skills">
+                    <span>No skills detected yet</span>
+                </div>
+
+            </div>
+
+
+            <!-- Job Roles -->
+            <div class="card">
+
+                <h3>💼 Suggested Job Roles</h3>
+
+                <ul id="jobRoles">
+                    <li>Analyze your resume to see suggestions.</li>
+                </ul>
+
+            </div>
+
+
+            <!-- Improvements -->
+            <div class="card">
+
+                <h3>⚠️ Improvement Suggestions</h3>
+
+                <ul id="suggestions">
+                    <li>Upload your resume to receive suggestions.</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 AI Resume Analyzer | Career Assistant</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
